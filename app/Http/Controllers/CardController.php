@@ -83,7 +83,7 @@ class CardController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name' => 'required|string|unique:tools',
+            'name' => 'required|string|unique:cards',
             'mana' => 'string',
             'thumb' => 'string',
             'type' => 'string',
