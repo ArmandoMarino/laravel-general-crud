@@ -74,7 +74,7 @@
                 <label for="first_effect" class="form-label">First effect of new card</label>
                 <textarea name="first_effect" id="first_effect" class="form-control"  cols="30">
                     {{ old('first_effect', $card->first_effect)}}
-                </textarea required>
+                </textarea>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
                 <label for="second_effect" class="form-label">Second effect of new card</label>
                 <textarea name="second_effect" id="second_effect" class="form-control"  cols="30">
                     {{ old('second_effect', $card->second_effect)}}
-                </textarea required>
+                </textarea>
             </div>
         </div>
 
@@ -94,7 +94,7 @@
                 <label for="third_effect" class="form-label">Third effect of new card</label>
                 <textarea name="third_effect" id="third_effect" class="form-control"  cols="30">
                     {{ old('third_effect', $card->third_effect)}}
-                </textarea required>
+                </textarea>
             </div>
         </div>
 
@@ -104,7 +104,7 @@
                 <label for="fourth_effect" class="form-label">Fourth effect of new card</label>
                 <textarea name="fourth_effect" id="fourth_effect" class="form-control"  cols="30">
                     {{ old('fourth_effect', $card->fourth_effect)}}
-                </textarea required>
+                </textarea>
             </div>
         </div>
 
@@ -113,7 +113,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Description of new card</label>
                 <textarea name="description" id="description" class="form-control"  cols="30">
-                    {{ old('description', $tool->description)}}
+                    {{ old('description', $card->description)}}
                 </textarea required>
             </div>
         </div>
@@ -123,7 +123,7 @@
             <div class="mb-3">
                 <label for="strength" class="form-label">Card strength</label>
                 <input name="strength" type="number" min="1" max="10" step="1" class="form-control" id="strength" placeholder="strength"
-                value="{{ old('strength', $tool->strength)}}" required>
+                value="{{ old('strength', $card->strength)}}" required>
             </div>
         </div>
 
@@ -132,7 +132,7 @@
             <div class="mb-3">
                 <label for="constitution" class="form-label">Card constitution</label>
                 <input name="constitution" type="number" min="1" max="10" step="1" class="form-control" id="constitution" placeholder="constitution"
-                value="{{ old('constitution', $tool->constitution)}}" required>
+                value="{{ old('constitution', $card->constitution)}}" required>
             </div>
         </div>
 
