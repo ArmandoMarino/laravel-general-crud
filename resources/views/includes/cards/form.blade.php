@@ -26,12 +26,21 @@
             </div>
         </div>
 
-        {{-- MANA --}}
+        {{-- MANA-COST --}}
         <div class="col-6">
             <div class="mb-3">
-                <label for="mana" class="form-label">Card mana</label>
-                <input name="mana" type="number" min="1" max="5" step="1" class="form-control" id="mana" placeholder="mana"
-                value="{{ old('mana', $card->mana)}}" required>
+                <label for="mana_cost" class="form-label">Card Cost</label>
+                <input name="mana_cost" type="number" min="1" max="5" step="1" class="form-control" id="mana_cost" placeholder="Mana Cost"
+                value="{{ old('mana_cost', $card->mana_cost)}}" required>
+            </div>
+        </div>
+
+         {{-- MANA-TYPE --}}
+         <div class="col-6">
+            <div class="mb-3">
+                <label for="mana_type" class="form-label">Mana Type</label>
+                <input name="mana_type" type="text" class="form-control" id="mana_type" placeholder="Mana Type"
+                value="{{ old('mana_type', $card->mana_type)}}" required>
             </div>
         </div>
         
