@@ -26,7 +26,7 @@
                         <div class="col text-center">
                             <img class='img-fluid
                                     mb-4 border border-4 border-dark'
-                                src="https://images.ctfassets.net/s5n2t79q9icq/4s3ygGWPG5QRL2SDOMZ3HA/51d9e0188b4578dff5aab889bf846e57/en_articles_archive_card-image-gallery_strixhaven-school-mages-art-cards-2021-04-15-meta-image.jpeg" alt="{{ $card->name }}">
+                                src="{{ $card->thumb }}" alt="{{ $card->name }}">
                         </div>
                         <div
                             class="col fs-5 text-session mb-1 border border-4 p-2 border-dark  d-flex justify-content-between align-items-center">
