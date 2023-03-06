@@ -12,7 +12,18 @@
                         </div>
                     @endif
                     <div class="row">
-                        <div class="card {{ $card->mana_type }}">
+                        <div class="d-flex">
+                            {{-- EDIT --}}
+                            <a class="btn btn-secondary px-4 m-3" href="{{ route('cards.edit', $card->id) }}">Edit card</a>
+                            {{-- DELETE --}}
+                            <form action="{{route('cards.destroy', $card->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger m-3">Delete Card</button>
+                            </form>
+                        </div>
+                        
+                        <div class="card {{ $card->mana_type }}"> 
                             <div class="col">
                                 <div
                                     class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
