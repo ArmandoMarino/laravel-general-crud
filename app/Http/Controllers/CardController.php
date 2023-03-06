@@ -45,7 +45,6 @@ class CardController extends Controller
             'description' => 'string',
             'strength' => 'numeric',
             'constitution' => 'numeric',
-
         ], [
             // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
             'name.required' => 'The Name field is required!',
@@ -85,7 +84,8 @@ class CardController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:cards',
-            'mana' => 'string',
+            'mana_cost' => 'string',
+            'mana_type' => 'string',
             'thumb' => 'string',
             'type' => 'string',
             'edition' => 'string',
@@ -96,7 +96,6 @@ class CardController extends Controller
             'description' => 'string',
             'strength' => 'numeric',
             'constitution' => 'numeric',
-
         ], [
             // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
             'name.required' => 'The Name field is required!',
