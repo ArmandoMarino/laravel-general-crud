@@ -16,18 +16,18 @@
     
 </head>
 <body>
-<header>
     {{-- navbar --}}
     @include('includes.nav')
-</header>
 <main>
+
     {{-- main content --}}
     @yield('content')
+
+
 </main>
-<footer>
     {{-- footer --}}
     @include('includes.footer')
-</footer>
+    
     {{-- scripts --}}
     @yield('scripts')
 </body>
