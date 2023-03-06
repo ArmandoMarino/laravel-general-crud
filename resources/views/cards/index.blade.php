@@ -19,7 +19,12 @@
                                     <div
                                         class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
                                         <p class='fs-5'>{{ $card->name }}</p>
-                                        <span class='fs-5'>{{ $card->mana_cost }}</span>
+                                        @for ($i = 0; $i <= $card->mana_cost; $i++)
+                                            <img class='type_mana'
+                                                src="{{ asset('images/manas/' . $card->mana_type . '.svg') }}"
+                                                alt="">
+                                        @endfor
+
                                     </div>
 
                                 </div>

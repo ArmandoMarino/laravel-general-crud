@@ -12,12 +12,20 @@
                         </div>
                     @endif
                     <div class="row">
+
                         <div class="card {{ $card->mana_type }}">
                             <div class="col">
                                 <div
                                     class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
                                     <p class='fs-4'>{{ $card->name }}</p>
-                                    <span class='fs-4'>{{ $card->mana_cost }}</span>
+                                    <div class="d-flex justify-content-end align-items-center">
+
+                                        @for ($i = 0; $i <= $card->mana_cost; $i++)
+                                            <img class='type_mana'
+                                                src="{{ asset('images/manas/' . $card->mana_type . '.svg') }}"
+                                                alt="">
+                                        @endfor
+                                    </div>
                                 </div>
 
                             </div>
