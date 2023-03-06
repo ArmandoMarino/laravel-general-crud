@@ -10,3 +10,4 @@
     
     @include('includes.cards.form')
 </section>
+@endsection
