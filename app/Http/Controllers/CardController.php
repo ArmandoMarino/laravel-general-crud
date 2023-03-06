@@ -33,7 +33,7 @@ class CardController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:cards',
-            'mana_cost' => 'string',
+            'mana_cost' => 'numeric',
             'mana_type' => 'string',
             'thumb' => 'string',
             'type' => 'string',
@@ -84,7 +84,7 @@ class CardController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:cards',
-            'mana_cost' => 'string',
+            'mana_cost' => 'numeric',
             'mana_type' => 'string',
             'thumb' => 'string',
             'type' => 'string',
