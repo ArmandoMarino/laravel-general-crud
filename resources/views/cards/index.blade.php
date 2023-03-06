@@ -10,9 +10,9 @@
 
         <div class="row my-5 g-5 justify-content-between">
             <h1>Cards List</h1>
-            <div id="list-card" class="d-flex">
+            <div id="list-card" class="d-flex flex-wrap">
                 @foreach ($cards as $card)
-                    <div class="col">
+                    <div class="col mb-5">
                         <div class="row">
                             <div class="card {{ $card->mana_type }}">
                                 <div class="col">
