@@ -19,7 +19,7 @@
     {{-- navbar --}}
     @include('includes.nav')
 <main>
-
+    @include('includes.jumbo')
     {{-- main content --}}
     @yield('content')
 
