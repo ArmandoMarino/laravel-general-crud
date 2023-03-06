@@ -1,4 +1,4 @@
-{{-- @include ('includes.alert') --}}
+@include ('includes.alert')
 
 @if($card->exists)
 <form action="{{ route('cards.update', $card->id) }}" method="POST" novalidate>
