@@ -14,7 +14,7 @@
                 @foreach ($cards as $card)
                     <div class="col">
                         <div class="row">
-                            <div class="card nature">
+                            <div class="card {{ $card->mana_type }}">
                                 <div class="col">
                                     <div
                                         class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
