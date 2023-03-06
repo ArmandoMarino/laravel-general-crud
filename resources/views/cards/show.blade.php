@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@extends('layouts.main')
 
 <body>
     <div class="container">
@@ -20,16 +12,26 @@
     @endif --}}
                 <div class="card">
                     <div class="row">
-                        <div class="col-8">
-                            <h1>{{ $card->name }}</h1>
-                        </div>
-
-                        <div class="col-4"><span>{{ $card->mana }}</span></div>
-                        <div class="col"> <img class='img-fluid' src="{{ $card->thumb }}" alt="{{ $card->name }}">
-                        </div>
-                        <div class="col-8">{{ $card->type }}</div>
-                        <div class="col-4">{{ $card->edition }}</div>
                         <div class="col">
+                            <div
+                                class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
+                                <p class='fs-4'><b>{{ $card->name }}<b></p>
+                                <span class='fs-4'>{{ $card->mana }}</span>
+                            </div>
+
+                        </div>
+                        <div class="col text-center">
+                            <img class='img-fluid
+                                    mb-4 border border-4 border-dark'
+                                src="{{ $card->thumb }}" alt="{{ $card->name }}">
+                        </div>
+                        <div
+                            class="col fs-5 text-session mb-1 border border-4 p-2 border-dark  d-flex justify-content-between align-items-center">
+                            <span>{{ $card->type }}</span>
+                            <span> {{ $card->edition }}</span>
+
+                        </div>
+                        <div class="text-session col border border-4 p-2 border-dark bg-color-white">
                             <ul>
                                 <li>{{ $card->first_effect }}</li>
                                 <li>{{ $card->second_effect }}</li>
@@ -37,11 +39,11 @@
                                 <li>{{ $card->fourth_effect }}</li>
                             </ul>
                             <div class="col-12">
-                                <p>{{ $card->description }}</p>
+                                <p class='text-start'>{{ $card->description }}</p>
                             </div>
                         </div>
                         <div class="col d-flex justify-content-end align-items-center">
-                            <span>{{ $card->strenght }}</span>
+                            <span>{{ $card->strength }}</span>/
                             <span>{{ $card->constitution }}</span>
                         </div>
 
@@ -53,7 +55,7 @@
         </div>
     </div>
 
-</html>
+    </html>
 
 </body>
 
