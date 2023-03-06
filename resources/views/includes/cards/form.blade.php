@@ -54,7 +54,7 @@
         <div class="col-6">
             <div class="mb-3">
                 <label for="type" class="form-label">Card type</label>
-                <input type="type" type="text" class="form-control" id="type" placeholder="type of new Card"
+                <input name="type" type="text" class="form-control" id="type" placeholder="type of new Card"
                 value="{{ old('type', $card->type)}}" required>
             </div>
         </div>
@@ -63,7 +63,7 @@
         <div class="col-6">
             <div class="mb-3">
                 <label for="edition" class="form-label">Card edition</label>
-                <input edition="edition" edition="text" class="form-control" id="edition" placeholder="edition of new Card"
+                <input name="edition" edition="text" class="form-control" id="edition" placeholder="edition of new Card"
                 value="{{ old('edition', $card->edition)}}" required>
             </div>
         </div>
@@ -122,7 +122,7 @@
         <div class="col-6">
             <div class="mb-3">
                 <label for="strength" class="form-label">Card strength</label>
-                <input name="strength" type="number" min="1" max="5" step="1" class="form-control" id="strength" placeholder="strength"
+                <input name="strength" type="number" min="1" max="10" step="1" class="form-control" id="strength" placeholder="strength"
                 value="{{ old('strength', $tool->strength)}}" required>
             </div>
         </div>
@@ -131,7 +131,7 @@
         <div class="col-6">
             <div class="mb-3">
                 <label for="constitution" class="form-label">Card constitution</label>
-                <input name="constitution" type="number" min="1" max="5" step="1" class="form-control" id="constitution" placeholder="constitution"
+                <input name="constitution" type="number" min="1" max="10" step="1" class="form-control" id="constitution" placeholder="constitution"
                 value="{{ old('constitution', $tool->constitution)}}" required>
             </div>
         </div>
