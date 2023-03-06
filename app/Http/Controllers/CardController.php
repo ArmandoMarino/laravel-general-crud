@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Card;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class CardController extends Controller
 {
@@ -33,18 +34,18 @@ class CardController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:cards',
-            'mana_cost' => 'numeric',
-            'mana_type' => 'string',
-            'thumb' => 'string',
-            'type' => 'string',
-            'edition' => 'string',
+            'mana_cost' => 'required|numeric',
+            'mana_type' => 'required|string',
+            'thumb' => 'required|string',
+            'type' => 'required|string',
+            'edition' => 'required|string',
             'first_effect' => 'nullable|string',
             'second_effect' => 'nullable|string',
             'third_effect' => 'nullable|string',
             'fourth_effect' => 'nullable|string',
-            'description' => 'string',
-            'strength' => 'numeric',
-            'constitution' => 'numeric',
+            'description' => 'nullable|string',
+            'strength' => 'required|numeric',
+            'constitution' => 'required|numeric',
         ], [
             // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
             'name.required' => 'The Name field is required!',
@@ -82,30 +83,32 @@ class CardController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'name' => 'required|string|unique:cards',
-            'mana_cost' => 'numeric',
-            'mana_type' => 'string',
-            'thumb' => 'string',
-            'type' => 'string',
-            'edition' => 'string',
-            'first_effect' => 'nullable|string',
-            'second_effect' => 'nullable|string',
-            'third_effect' => 'nullable|string',
-            'fourth_effect' => 'nullable|string',
-            'description' => 'string',
-            'strength' => 'numeric',
-            'constitution' => 'numeric',
-        ], [
-            // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
-            'name.required' => 'The Name field is required!',
-        ]);
-
         // REQUEST PER CAMPI FORM come lo STORE
         $data = $request->all();
         $card = Card::findOrFail($id);
 
         $card->update($data);
+
+        $request->validate([
+            'name' => ['required', 'string', Rule::unique('cards')->ignore($card->id)],
+            'mana_cost' => 'required|numeric',
+            'mana_type' => 'required|string',
+            'thumb' => 'required|string',
+            'type' => 'required|string',
+            'edition' => 'required|string',
+            'first_effect' => 'nullable|string',
+            'second_effect' => 'nullable|string',
+            'third_effect' => 'nullable|string',
+            'fourth_effect' => 'nullable|string',
+            'description' => 'nullable|string',
+            'strength' => 'required|numeric',
+            'constitution' => 'required|numeric',
+        ], [
+            // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
+            'name.required' => 'The Name field is required!',
+        ]);
+
+
 
         return to_route('cards.show', $card->id)
             ->with('message', "Change made successfully")
