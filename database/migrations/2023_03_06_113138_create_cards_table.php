@@ -19,10 +19,10 @@ return new class extends Migration
             $table->text('thumb');
             $table->string('type', 100);
             $table->string('edition', 100);
-            $table->text('first-effect')->nullable();
-            $table->text('second-effect')->nullable();
-            $table->text('third-effect')->nullable();
-            $table->text('fourth-effect')->nullable();
+            $table->text('first_effect')->nullable();
+            $table->text('second_effect')->nullable();
+            $table->text('third_effect')->nullable();
+            $table->text('fourth_effect')->nullable();
             $table->text('description')->nullable();
             $table->tinyInteger('strength')->unsigned();
             $table->tinyInteger('constitution')->unsigned();
