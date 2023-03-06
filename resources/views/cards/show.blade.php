@@ -3,18 +3,7 @@
 @section('content')
     <div class="container">
         <div id="detail-card">
-            <div class="row">
-                <div class="col">
-
-                    @if (session('update'))
-                        <div class="alert alert-info  mt-5" role="alert">
-                            {{ session('update') }}
-                        </div>
-                    @endif
-                    <div class="row">
-
-                        <div class="card {{ $card->mana_type }}">
-                            <div class="d-flex">
+                                                    <div class="d-flex justify-content-center my-5">
                                 {{-- EDIT --}}
                                 <a class="btn btn-secondary px-4 m-3" href="{{ route('cards.edit', $card->id) }}">Edit
                                     card</a>
@@ -25,7 +14,15 @@
                                     <button type="submit" class="btn btn-danger m-3">Delete Card</button>
                                 </form>
                             </div>
+            <div class="row">
+                <div class="col">
 
+                    @if (session('update'))
+                        <div class="alert alert-info  mt-5" role="alert">
+                            {{ session('update') }}
+                        </div>
+                    @endif
+                    <div class="row">
                             <div class="card {{ $card->mana_type }}">
                                 <div class="col">
                                     <div
@@ -68,10 +65,7 @@
                                     <span>{{ $card->strength }}</span>/
                                     <span>{{ $card->constitution }}</span>
                                 </div>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>

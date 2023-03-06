@@ -12,9 +12,10 @@
             <h1>Cards List</h1>
             <div id="list-card" class="d-flex flex-wrap">
                 @foreach ($cards as $card)
+                <div class="cards-button">
+
+                
                     <div class="col mb-5">
-
-
                         <div class="row">
                             <div class="card {{ $card->mana_type }}">
                                 {{-- LINK A SHOW --}}
@@ -23,7 +24,13 @@
                                         <div
                                             class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
                                             <p class='fs-5'>{{ $card->name }}</p>
-                                            <span class='fs-5'>{{ $card->mana_cost }}</span>
+                                            <span class='fs-5'>                                        <div class="d-flex justify-content-end align-items-center">
+                                        @for ($i = 0; $i <= $card->mana_cost; $i++)
+                                            <img class='type_mana'
+                                                src="{{ asset('images/manas/' . $card->mana_type . '.svg') }}"
+                                                alt="">
+                                        @endfor
+                                        </div></span>
                                         </div>
 
                                     </div>
@@ -34,14 +41,7 @@
                                     </div>
                                     <div
                                         class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
-                                        <p class='fs-5'>{{ $card->name }}</p>
-                                        @for ($i = 0; $i <= $card->mana_cost; $i++)
-                                            <img class='type_mana'
-                                                src="{{ asset('images/manas/' . $card->mana_type . '.svg') }}"
-                                                alt="">
-                                        @endfor
-
-                                        class="col fs-5 text-session mb-1 border border-4 p-2 border-dark  d-flex justify-content-between align-items-center">
+ 
                                         <span>{{ $card->type }}</span>
                                         <span> {{ $card->edition }}</span>
                                     </div>
@@ -74,6 +74,7 @@
 
                         </div>
                     </div>
+                 </div>
                 @endforeach
             </div>
         </div>
