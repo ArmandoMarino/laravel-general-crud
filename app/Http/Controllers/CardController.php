@@ -32,7 +32,7 @@ class CardController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|unique:tools',
+            'name' => 'required|string|unique:cards',
             'mana' => 'string',
             'thumb' => 'string',
             'type' => 'string',
