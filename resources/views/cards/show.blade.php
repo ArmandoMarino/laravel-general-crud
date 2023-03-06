@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col">
 
-                {{-- @if (session('update'))
+                @if (session('update'))
         <div class="alert alert-info  mt-5" role="alert">
             {{ session('update') }}
         </div>
-    @endif --}}
+    @endif
                 <div class="row">
                     <div class="card nature">
                         <div class="col">
