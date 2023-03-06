@@ -9,14 +9,17 @@
     <section id="contents-space" class="container">
 
         <div class="row my-5 g-5 justify-content-between">
-            <h1>Cards List</h1>
+            <div class="d-flex justify-content-between" >
+                <h1>Cards List</h1>
+                <a class="btn btn-primary m-3" href="{{ route('cards.create')}}">Add Card</a>
+            </div>
+            
             <div id="list-card" class="d-flex flex-wrap">
                 @foreach ($cards as $card)
                 <div class="cards-button">
-
-                
                     <div class="col mb-5">
                         <div class="row">
+
                             <div class="card {{ $card->mana_type }}">
                                 {{-- LINK A SHOW --}}
                                 <a href="{{ route('cards.show', $card->id) }}">
