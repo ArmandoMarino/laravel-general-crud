@@ -22,7 +22,7 @@ class CardController extends Controller
     public function create()
     {
         // FAKE VARIABLE CARDS
-        $cards = new Card();
+        $card = new Card();
         return view('cards.create', compact('card'));
     }
 
