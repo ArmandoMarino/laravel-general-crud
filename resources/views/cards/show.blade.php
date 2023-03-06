@@ -10,12 +10,12 @@
             {{ session('update') }}
         </div>
     @endif --}}
-                <div class="card">
-                    <div class="row">
+                <div class="row">
+                    <div class="card nature">
                         <div class="col">
                             <div
                                 class='text-session name border border-4 border-dark p-2 d-flex justify-content-between mb-3'>
-                                <p class='fs-4'><b>{{ $card->name }}<b></p>
+                                <p class='fs-4'>{{ $card->name }}</p>
                                 <span class='fs-4'>{{ $card->mana }}</span>
                             </div>
 

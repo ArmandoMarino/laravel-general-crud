@@ -5,9 +5,8 @@
     margin: 20px auto;
     padding: 10px;
     border: 5px solid #000;
-    border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
+  font-weight:bold
     
   }
   
@@ -21,9 +20,7 @@
     border:2px solid black
 }
 
-.text-session{
-background-color:#dfd79a   ;
-}
+
 
   .card h1 {
     text-align: center;
@@ -38,22 +35,39 @@ background-color:#dfd79a   ;
   }
 
   .fire{
-    
+    background-image: linear-gradient(to bottom, #6c0909, #FFC300);;
+    .text-session{
+      background-color:#dfd79a   ;
+      }
   }
 
   .water{
-
+    background-image: linear-gradient(to bottom, #0077be, #fff);
+    .text-session{
+      background-color:#b4d8e4   ;
+      }
   }
 
   .nature{
+    background-color: #228B22;
+    .text-session{
+      background-color:#94ff94   ;
+      }
 
   }
 
   .death{
+    background-image: linear-gradient(to bottom, #777777, #333333);
+    .text-session{
+      background-color:#bbb6b6   ;
+      }
 
   }
 
   .light{
-
+    background-image: linear-gradient(to bottom, #dadac3, #FFFFFF);
+    .text-session{
+      background-color:#ffffff   ;
+      }
     
   }
