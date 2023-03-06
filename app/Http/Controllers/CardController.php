@@ -37,10 +37,10 @@ class CardController extends Controller
             'thumb' => 'string',
             'type' => 'string',
             'edition' => 'string',
-            'first-effect' => 'nullable|string',
-            'second-effect' => 'nullable|string',
-            'third-effect' => 'nullable|string',
-            'fourth-effect' => 'nullable|string',
+            'first_effect' => 'nullable|string',
+            'second_effect' => 'nullable|string',
+            'third_effect' => 'nullable|string',
+            'fourth_effect' => 'nullable|string',
             'description' => 'string',
             'strength' => 'numeric',
             'constitution' => 'numeric',
@@ -73,7 +73,8 @@ class CardController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $card = Card::findOrFail($id);
+        return view('cards.edit', compact('card'));
     }
 
     /**
@@ -81,7 +82,34 @@ class CardController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|unique:tools',
+            'mana' => 'string',
+            'thumb' => 'string',
+            'type' => 'string',
+            'edition' => 'string',
+            'first_effect' => 'nullable|string',
+            'second_effect' => 'nullable|string',
+            'third_effect' => 'nullable|string',
+            'fourth_effect' => 'nullable|string',
+            'description' => 'string',
+            'strength' => 'numeric',
+            'constitution' => 'numeric',
+
+        ], [
+            // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
+            'name.required' => 'The Name field is required!',
+        ]);
+
+        // REQUEST PER CAMPI FORM come lo STORE
+        $data = $request->all();
+        $card = Card::findOrFail($id);
+
+        $card->update($data);
+
+        return to_route('cards.show', $card->id)
+            ->with('message', "Change made successfully")
+            ->with('type', 'success');
     }
 
     /**
@@ -89,6 +117,10 @@ class CardController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $card = Card::findOrFail($id);
+        $card->delete();
+        return to_route('cards.index')
+            ->with('message', "$card->name successfully Deleted")
+            ->with('type', 'success');
     }
 }
