@@ -1,7 +1,7 @@
 .card {
     background-color: #d4af37;
-    width: 300px;
-    height: 420px;
+    width: 600px;
+    height: 800px;
     margin: 20px auto;
     padding: 10px;
     border: 5px solid #000;
@@ -9,12 +9,20 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
   
-  .card img {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-  }
+//   .card img {
+//     display: block;
+//     margin: 0 auto;
+//     width: 80%;
+//   }
   
+.name{
+    border:2px solid black
+}
+
+.text-session{
+background-color:#dfd79a   ;
+}
+
   .card h1 {
     text-align: center;
     font-size: 24px;
@@ -25,4 +33,25 @@
     text-align: center;
     font-size: 18px;
     margin: 0;
+  }
+
+  .fire{
+
+  }
+
+  .water{
+
+  }
+
+  .nature{
+
+  }
+
+  .death{
+
+  }
+
+  .light{
+
+    
   }
