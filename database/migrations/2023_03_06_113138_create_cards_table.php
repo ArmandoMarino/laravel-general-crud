@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
 
             $table->string('name', 100)->unique();
-            $table->tinyInteger('mana')->unsigned();
+            $table->tinyInteger('mana_cost')->unsigned();
+            $table->string('mana_type', 100);
             $table->text('thumb');
             $table->string('type', 100);
             $table->string('edition', 100);

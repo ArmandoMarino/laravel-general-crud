@@ -3,8 +3,9 @@
 return [
     [
         "name" => "Arcanis l'Onnipotente",
-        "mana" => 3,
-        "thumb" => "https://m.media-amazon.com/images/I/51tfburGhmL._AC_SY355_.jpg",
+        "mana_cost" => 3,
+        "mana_type" => "fire",
+        "thumb" => "https://images.ctfassets.net/s5n2t79q9icq/4s3ygGWPG5QRL2SDOMZ3HA/51d9e0188b4578dff5aab889bf846e57/en_articles_archive_card-image-gallery_strixhaven-school-mages-art-cards-2021-04-15-meta-image.jpeg",
         "type" => "Creatura Leggendaria - Mago",
         "edition" => "X",
         "first_effect" => "pesca 3 carte",
@@ -17,8 +18,9 @@ return [
     ],
     [
         "name" => "Gianmaria S. il durevole",
-        "mana" => 4,
-        "thumb" => "https://m.media-amazon.com/images/I/51tfburGhmL._AC_SY355_.jpg",
+        "mana_cost" => 4,
+        "mana_type" => "water",
+        "thumb" => "http://ninjacrunch.com/wp-content/uploads/2011/07/p3/4.jpg",
         "type" => "Creatura Leggendaria - Guerriero",
         "edition" => "X",
         "first_effect" => "tappa 2 carte",
@@ -31,8 +33,9 @@ return [
     ],
     [
         "name" => "Antonio lo sconnessionato",
-        "mana" => 2,
-        "thumb" => "https://m.media-amazon.com/images/I/51tfburGhmL._AC_SY355_.jpg",
+        "mana_cost" => 2,
+        "mana_type" => "nature",
+        "thumb" => "https://assets.dicebreaker.com/mtg-modern-horizons-2-artwork.png/BROK/resize/1200x1200%3E/format/jpg/quality/70/mtg-modern-horizons-2-artwork.png",
         "type" => "Creatura Leggendaria - Arciere",
         "edition" => "X",
         "first_effect" => "tappa per spaccare una creatura al prossimo turno",
